@@ -1,0 +1,35 @@
+{
+  "name": "topo",
+  "version": "1.0.0",
+  "description": "A React library implementing the SRND design language.",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/react": "^4.1.6",
+    "@types/react": "^16.7.18",
+    "babel-loader": "^8.0.5",
+    "import": "0.0.6",
+    "prop-types": "^15.6.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SRND/Topo.git"
+  },
+  "keywords": [
+    "design",
+    "srnd"
+  ],
+  "author": "Tyler Menezes",
+  "license": "Artistic-2.0",
+  "bugs": {
+    "url": "https://github.com/SRND/Topo/issues"
+  },
+  "homepage": "https://github.com/SRND/Topo#readme"
+}
