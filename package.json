@@ -4,18 +4,19 @@
   "description": "A React library implementing the SRND design language.",
   "main": "index.js",
   "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@storybook/react": "^4.1.6",
+    "@babel/core": "^7.3.3",
+    "@storybook/react": "^4.1.12",
     "@types/react": "^16.7.18",
     "babel-loader": "^8.0.5",
     "import": "0.0.6",
     "prop-types": "^15.6.2"
   },
   "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
