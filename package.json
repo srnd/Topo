@@ -16,8 +16,8 @@
     "prop-types": "^15.6.2"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "start-storybook -p 9000 -c .storybook",
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "repository": {
     "type": "git",

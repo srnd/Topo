@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Button } from '@storybook/react/demo';
-import {Announcement} from '../src/components/Announment'
+import {Announcement} from '../src/components/Announcement'
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -11,7 +11,7 @@ storiesOf('Button', module)
     <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
   ));
 
-storiesOf('Announment', module)
+storiesOf('Announcement', module)
   .add('current', () => (
     <Announcement title="This is some text!" />
   ))
