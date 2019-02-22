@@ -1,8 +1,17 @@
-import { configure } from '@storybook/react';
+import React from 'react'
+import { configure, addDecorator } from '@storybook/react'
+import { ThemeProvider, Box } from '../src'
 
-function loadStories() {
-  require('../stories/index.js');
-  // You can require as many stories as you need.
+addDecorator(story => (
+  <ThemeProvider webfonts>
+    <Box p={3}>{story()}</Box>
+  </ThemeProvider>
+))
+
+const req = require.context('.', true, /\.js$/)
+
+const load = () => {
+  req.keys().forEach(req)
 }
 
-configure(loadStories, module);
+configure(load, module)
