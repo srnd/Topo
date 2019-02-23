@@ -7,7 +7,7 @@ import {
   color,
   fontSize,
   textAlign,
-  propTypes
+  propTypes,
 } from 'styled-system'
 import PropTypes from 'prop-types'
 
@@ -49,7 +49,7 @@ Button.propTypes = {
   /** add left text arrows */
   chevronLeft: PropTypes.bool,
   /** add right text arrows */
-  chevronRight: PropTypes.bool
+  chevronRight: PropTypes.bool,
 }
 
 Button.defaultProps = {
@@ -57,7 +57,7 @@ Button.defaultProps = {
   bg: 'primary',
   color: 'white',
   fontSize: 2,
-  m: 0
+  m: 0,
 }
 
 Button.button = Button.withComponent('button')

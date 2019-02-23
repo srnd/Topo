@@ -16,13 +16,13 @@ const palette = {
   grayDark: '#8a8a8a',
   gray: '#bdbdbd',
   grayLight: '#e6e6e6',
-  grayLightest: '#f9f9f9'
+  grayLightest: '#f9f9f9',
 }
 
 const brand = {
   primary: palette.red,
   accent: palette.blue,
-  success: palette.green
+  success: palette.green,
   // info: palette.blue[5],
   // warning: palette.orange[5],
   // error: palette.red[7],
@@ -31,7 +31,7 @@ const brand = {
 
 export const colors = {
   ...brand,
-  ...palette
+  ...palette,
 }
 
 export const cx = key => get(colors, key, key)
@@ -44,7 +44,7 @@ const addAliases = (arr, aliases) =>
       enumerable: false,
       get() {
         return this[i]
-      }
+      },
     })
   )
 
@@ -54,7 +54,7 @@ export const breakpoints = [32, 48, 64, 80]
 export const mediaQueries = {
   ...breakpoints.map(createMediaQuery),
   reduceMotion: '@media (prefers-reduced-motion: reduce)',
-  reduceTransparency: '@media (prefers-reduced-transparency: reduce)'
+  reduceTransparency: '@media (prefers-reduced-transparency: reduce)',
 }
 
 addAliases(breakpoints, aliases)
@@ -88,7 +88,7 @@ export const boxShadows = [
   baseShadow + `0 2px 2px 0 ${shadowColor}`,
   baseShadow + `1px 3px 4px 0 ${shadowColor}`,
   baseShadow + `0 12px 12px 0 ${shadowColor}`,
-  baseShadow + `0 24px 24px 0 ${shadowColor}`
+  baseShadow + `0 24px 24px 0 ${shadowColor}`,
 ]
 
 export const hexa = (color, alpha) => {
@@ -132,7 +132,7 @@ export const filterProps = props =>
     'wrap',
     'size',
     'height',
-    'boxShadowSize'
+    'boxShadowSize',
   ])
 
 const theme = {
@@ -156,7 +156,7 @@ const theme = {
   cx,
   hexa,
   gradient,
-  filterProps
+  filterProps,
 }
 
 export default theme

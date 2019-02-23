@@ -8,7 +8,7 @@ import {
   fontSize,
   textAlign,
   responsiveStyle,
-  propTypes
+  propTypes,
 } from 'styled-system'
 import theme, { filterProps } from './theme'
 
@@ -27,14 +27,14 @@ Box.section = Box.withComponent('section')
 Box.footer = Box.withComponent('footer')
 
 Box.defaultProps = {
-  theme
+  theme,
 }
 
 Box.propTypes = {
   ...propTypes.textAlign,
   ...propTypes.fontSize,
   ...propTypes.space,
-  ...propTypes.color
+  ...propTypes.color,
 }
 
 export default Box

@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import Text from "./Text";
-import PropTypes from "prop-types";
-import { css } from "styled-components";
-import theme from "./theme";
+import styled from 'styled-components'
+import Text from './Text'
+import PropTypes from 'prop-types'
+import { css } from 'styled-components'
+import theme from './theme'
 
 const Link = styled(Text)`
-  text-decoration: ${props => (props.underline ? "underline" : "none")};
+  text-decoration: ${props => (props.underline ? 'underline' : 'none')};
   ${props =>
     props.hoverline &&
     css`
@@ -19,9 +19,9 @@ const Link = styled(Text)`
     text-decoration: none !important;
     display: inline-block;
   }
-`.withComponent("a");
+`.withComponent('a')
 
-Link.displayName = "Link";
+Link.displayName = 'Link'
 
 Link.propTypes = {
   /** you know, where the link goes */
@@ -33,11 +33,11 @@ Link.propTypes = {
   /** add left text arrows */
   chevronLeft: PropTypes.bool,
   /** add right text arrows */
-  chevronRight: PropTypes.bool
-};
+  chevronRight: PropTypes.bool,
+}
 
 Link.defaultProps = {
-  theme
-};
+  theme,
+}
 
-export default Link;
+export default Link

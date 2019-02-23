@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import {
   ThemeProvider as Root,
   createGlobalStyle,
-  css
+  css,
 } from 'styled-components'
 import PropTypes from 'prop-types'
 import theme from './theme'
@@ -138,11 +138,11 @@ const ThemeProvider = ({ theme, ...props }) => {
 }
 
 ThemeProvider.propTypes = {
-  theme: PropTypes.object
+  theme: PropTypes.object,
 }
 
 ThemeProvider.defaultProps = {
-  theme
+  theme,
 }
 
 export default ThemeProvider

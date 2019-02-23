@@ -5,7 +5,7 @@ import {
   justifyContent,
   flexDirection,
   flex,
-  propTypes
+  propTypes,
 } from 'styled-system'
 import Box from './Box'
 import PropTypes from 'prop-types'
@@ -23,7 +23,7 @@ Flex.propTypes = {
   ...propTypes.alignItems,
   ...propTypes.justifyContent,
   ...propTypes.flexDirection,
-  ...propTypes.flex
+  ...propTypes.flex,
 }
 
 Flex.displayName = 'Flex'

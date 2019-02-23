@@ -7,7 +7,7 @@ import {
   textAlign,
   space,
   color,
-  propTypes
+  propTypes,
 } from 'styled-system'
 import theme, { filterProps } from './theme'
 
@@ -45,12 +45,12 @@ Text.propTypes = {
   ...propTypes.fontWeight,
   ...propTypes.textAlign,
   ...propTypes.space,
-  ...propTypes.color
+  ...propTypes.color,
 }
 
 Text.defaultProps = {
   theme,
-  m: 0
+  m: 0,
 }
 
 Text.span = Text.withComponent('span')

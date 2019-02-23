@@ -8,7 +8,7 @@ storiesOf('Announcment', module).add(
   withInfo({
     inline: true,
     text:
-      'Use the <Announcement /> component to render a featured announcement.'
+      'Use the <Announcement /> component to render a featured announcement.',
   })(() => (
     <Announcement>Our spring CodeDay lineup has been announced.</Announcement>
   ))

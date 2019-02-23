@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "start-storybook -p 6006",
     "prepare": "babel src -d dist --ignore __tests__ && yarn run fmt",
-    "fmt": "prettier {.storybook,src}/**/*.js --single-quote --no-semi --write"
+    "fmt": "prettier {.storybook,src}/**/*.js --write"
   },
   "husky": {
     "hooks": {
