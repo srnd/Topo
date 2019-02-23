@@ -22,7 +22,7 @@ const palette = {
 const brand = {
   primary: palette.red,
   accent: palette.blue,
-  success: palette.green,
+  success: palette.green
   // info: palette.blue[5],
   // warning: palette.orange[5],
   // error: palette.red[7],

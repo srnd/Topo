@@ -29,7 +29,7 @@ Announcement.defaultProps = {
   fontSize: 1,
   m: 0,
   p: 2,
-  pb: -1,
+  pb: -1
 }
 
 Announcement.button = Announcement.withComponent('button')
