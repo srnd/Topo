@@ -19,7 +19,7 @@ const Link = styled(Text)`
     text-decoration: none !important;
     display: inline-block;
   }
-`.withComponent('a')
+`
 
 Link.displayName = 'Link'
 
@@ -30,10 +30,6 @@ Link.propTypes = {
   underline: PropTypes.bool,
   /** enable text-decoration: underline on hover*/
   hoverline: PropTypes.bool,
-  /** add left text arrows */
-  chevronLeft: PropTypes.bool,
-  /** add right text arrows */
-  chevronRight: PropTypes.bool,
 }
 
 Link.defaultProps = {

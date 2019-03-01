@@ -15,7 +15,7 @@ storiesOf('Button', module)
     'Button w/ Link',
     withInfo({
       inline: true,
-      text: `Use the <Button as='a'/> component to render a button with link.`,
+      text: `Use the <Button as='a' /> component to render a button with link.`,
     })(() => (
       <Button as="a" href="https://www.srnd.org">
         Button

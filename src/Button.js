@@ -25,13 +25,13 @@ const Button = styled(Box)`
   border: 1px solid transparent
   &:hover {
     box-shadow: ${({ theme }) => theme.boxShadows[0]};
-    background-color: ${props => hexa(props.bg, 0.7)};
+    background-color: ${props => hexa(props.bg, 0.9)};
   }
   &:active:hover {
     box-shadow: ${({ theme }) => theme.boxShadows[1]};
   }
   &:active {
-    background-color: ${props => hexa(props.bg, 0.3)};
+    background-color: ${props => hexa(props.bg, 0.7)};
   }
   @media (hover:none) {
     box-shadow: ${({ theme }) => theme.boxShadows[1]};

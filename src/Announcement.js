@@ -16,9 +16,9 @@ const Announcement = styled(Box)`
     width: 100%
     text-align: center
     text-decoration: none
-    background-color: ${({ theme }) => theme.colors.greenLightest};
+    background-color: ${props => hexa(props.bg, 0.2)};
     font-weight: 500
-    border-bottom: 3px solid ${({ theme }) => theme.colors.greenLight};
+    border-bottom: 3px solid ${props => hexa(props.bg, 0.4)};
 `
 
 Announcement.displayName = 'Announcement'
@@ -26,6 +26,7 @@ Announcement.displayName = 'Announcement'
 Announcement.defaultProps = {
   theme,
   color: 'black',
+  bg: 'success',
   fontSize: 1,
   m: 0,
   p: 2,

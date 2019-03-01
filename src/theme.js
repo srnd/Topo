@@ -68,6 +68,18 @@ export const mono = 'SFMono-Regular,"Roboto Mono",Menlo,monospace'
 
 export const fontSizes = [13.5, 16, 18, 24, 27, 36, 48, 54, 72, 96]
 
+// TODO: This needs to be recalculated based on a new design guidline
+
+//export const fontSizes = [4.9, 7.33, 11, 16.5, 24.75, 37.125, 55.67, 83.5, 125.3, 188, 282, 423, 634, 951]
+
+// const huge = fontSizes[6]
+// const big = fontSizes[5]
+// const h1 = fontSizes[4]
+// const h2 = fontSizes[3]
+// const h3 = fontSizes[2]
+// const body = fontSizes[2]
+// const Caption = fontSizes[1]
+
 export const regular = 'regular'
 export const bold = 'bold'
 
