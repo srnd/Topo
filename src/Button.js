@@ -12,17 +12,19 @@ import {
 import PropTypes from 'prop-types'
 
 const Button = styled(Box)`
-  padding: 0.5rem 1rem
-  display: inline-block
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  cursor: pointer;
+
   font-size: ${({ theme }) => theme.fontSizes[0]};
-  font-weight: 500
-  text-decoration: none
+  font-weight: 500;
+  text-decoration: none;
+
+  border: 1px solid transparent;
   border-radius: ${({ theme }) => theme.radii[1]};
 
-  cursor: pointer
+  transition: all 0.2s ease-in-out;
 
-  transition: all .2s ease-in-out
-  border: 1px solid transparent
   &:hover {
     box-shadow: ${({ theme }) => theme.boxShadows[0]};
     background-color: ${props => hexa(props.bg, 0.9)};
@@ -32,8 +34,9 @@ const Button = styled(Box)`
   }
   &:active {
     background-color: ${props => hexa(props.bg, 0.7)};
+    transform: scale(0.98);
   }
-  @media (hover:none) {
+  @media (hover: none) {
     box-shadow: ${({ theme }) => theme.boxShadows[1]};
   }
   ${props => props.disabled && { opacity: 0.5, cursor: 'not-allowed' }};

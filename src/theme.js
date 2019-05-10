@@ -22,6 +22,7 @@ const palette = {
 const brand = {
   primary: palette.red,
   accent: palette.blue,
+  accentLight: palette.blueLight,
   success: palette.green,
   // info: palette.blue[5],
   // warning: palette.orange[5],
@@ -93,6 +94,7 @@ export const transition = `${3 / 16}s cubic-bezier(0.375, 0, 0.675, 1)`
 export const pill = '9999px'
 export const radii = ['0px', '2px', '4px', '8px', '16px', pill]
 export const radius = '2px'
+export const borderThickness = '1px'
 
 export const shadowColor = 'rgba(0,0,0,0.13)'
 export const baseShadow = '0 0 2px 0 rgba(0, 0, 0, 0.04),'
@@ -160,6 +162,7 @@ const theme = {
   colors,
   radii,
   radius,
+  borderThickness,
   pill,
   scaleFactor,
   transition,
