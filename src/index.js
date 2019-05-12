@@ -6,6 +6,7 @@ export { default as Flex } from './Flex'
 export { default as Text } from './Text'
 export { default as Link } from './Link'
 export { default as Input } from './Input'
+export { default as Field } from './Field'
 
 export { default as theme } from './theme'
 export { default as ThemeProvider } from './ThemeProvider'

@@ -24,9 +24,9 @@ const brand = {
   accent: palette.blue,
   accentLight: palette.blueLight,
   success: palette.green,
-  // info: palette.blue[5],
+  info: palette.blue,
   // warning: palette.orange[5],
-  // error: palette.red[7],
+  error: palette.red,
   // muted: grays.silver
 }
 

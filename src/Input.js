@@ -45,10 +45,10 @@ const InputField = styled.input`
   ${({ error }) =>
     error &&
     css`
-      border-color: ${({ theme }) => theme.colors.red};
       &:not(:focus) {
+        border-color: ${({ theme }) => theme.colors.error};
         color: ${({ theme }) =>
-          theme.colors.red}; /* TODO(@tylermenezes): Dark red? */
+          theme.colors.error}; /* TODO(@tylermenezes): Dark red? */
       }
     `}
 
@@ -66,32 +66,29 @@ const InputField = styled.input`
   }
 `
 
-const Input = props => {
-  const [inputValue, setInputValue] = useState(props.initValue)
-
-  return (
-    <InputWrapper>
-      <InputField
-        value={inputValue}
-        onChange={e => setInputValue(e.target.value)}
-        {...props}
-      />
-      {['bottom', 'right', 'top', 'left'].map(role => (
-        <InputBorder role={role} />
-      ))}
-    </InputWrapper>
-  )
-}
+const Input = props => (
+  <InputWrapper>
+    <InputField {...props} />
+    {['bottom', 'right', 'top', 'left'].map(role => (
+      <InputBorder role={role} />
+    ))}
+  </InputWrapper>
+)
 
 Input.displayName = 'Input'
 
 Input.propTypes = {
   /** what the field says before it's filled out */
-  placeholder: PropTypes.string,
-  /** what the field says */
-  initValue: PropTypes.bool,
+  optionalPlaceholder: PropTypes.string,
+
   /** if true, there was an error in this field */
-  error: PropTypes.bool,
+  optionalError: PropTypes.bool,
+
+  /** current text value */
+  value: PropTypes.string,
+
+  /** function to run when the user types new text */
+  onChange: PropTypes.func,
 }
 
 Input.defaultProps = {
