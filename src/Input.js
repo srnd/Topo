@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import theme from './theme'
@@ -66,14 +66,22 @@ const InputField = styled.input`
   }
 `
 
-const Input = props => (
-  <InputWrapper>
-    <InputField {...props} />
-    {['bottom', 'right', 'top', 'left'].map(role => (
-      <InputBorder role={role} />
-    ))}
-  </InputWrapper>
-)
+const Input = props => {
+  const [inputValue, setInputValue] = useState(props.initValue)
+
+  return (
+    <InputWrapper>
+      <InputField
+        value={inputValue}
+        onChange={e => setInputValue(e.target.value)}
+        {...props}
+      />
+      {['bottom', 'right', 'top', 'left'].map(role => (
+        <InputBorder role={role} />
+      ))}
+    </InputWrapper>
+  )
+}
 
 Input.displayName = 'Input'
 
@@ -81,11 +89,10 @@ Input.propTypes = {
   /** what the field says before it's filled out */
   placeholder: PropTypes.string,
   /** what the field says */
-  value: PropTypes.bool,
+  initValue: PropTypes.bool,
   /** if true, there was an error in this field */
   error: PropTypes.bool,
 }
-/* TODO(@tylermenezes): Onchange */
 
 Input.defaultProps = {
   theme,

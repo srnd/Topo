@@ -17,6 +17,6 @@ storiesOf('Input', module)
       inline: true,
       text: '<Input> component',
     })(() => (
-      <Input placeholder="me@example.com" value="me@example" error={true} />
+      <Input placeholder="me@example.com" initValue="me@example" error={true} />
     ))
   )
