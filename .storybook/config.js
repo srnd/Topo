@@ -1,6 +1,14 @@
 import React from 'react'
-import { configure, addDecorator } from '@storybook/react'
+import { configure, addDecorator, addParameters } from '@storybook/react'
 import { ThemeProvider, Box } from '../src'
+
+import srndTheme from './srndTheme'
+
+addParameters({
+  options: {
+    theme: srndTheme,
+  },
+})
 
 addDecorator(story => (
   <ThemeProvider webfonts>
