@@ -13,7 +13,8 @@ const Error = styled.span`
     children &&
     css`
       &:before {
-        content: ' — ';
+        margin-left: 0.5em;
+        content: '⚠ '; /* TODO(@tylermenezes): Icon font with a better ! glyph. */
       }
     `}
 `
