@@ -1,5 +1,4 @@
 import { includes, get, omit } from 'lodash'
-import { removeProps } from 'styled-system'
 
 const palette = {
   red: '#ff686b',
@@ -126,7 +125,7 @@ export const gradient = (color1, color2) =>
   )`
 
 export const filterProps = props =>
-  omit(removeProps(props), [
+  omit(props, [
     'theme',
     'xs',
     'sm',
