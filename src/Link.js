@@ -5,20 +5,20 @@ import { css } from 'styled-components'
 import theme from './theme'
 
 const Link = styled(Text)`
-  text-decoration: ${props => (props.underline ? 'underline' : 'none')};
-  ${props =>
-    props.hoverline &&
-    css`
-      &:focus,
-      &:hover {
-        text-decoration: underline;
-      }
-    `};
-  &:before,
-  &:after {
-    text-decoration: none !important;
-    display: inline-block;
+  display: inline-block;
+  position: relative;
+
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
   }
+
+  ${({ underline }) =>
+    (typeof underline === 'undefined' || underline) &&
+    css`
+      text-decoration: underline;
+      text-decoration-skip-ink: auto;
+    `}
 `
 
 Link.displayName = 'Link'

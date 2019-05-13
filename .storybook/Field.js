@@ -1,44 +1,40 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { Field } from '../src'
+import { Input, Textarea } from '../src/Field'
+import styled from 'styled-components'
+import { loremIpsum } from 'lorem-ipsum'
 
-storiesOf('Field', module)
+storiesOf('Form Fields', module)
   .add(
-    'Input component',
+    'One-line Textbox',
     withInfo({
       inline: true,
-      text: '<Field> component',
+      text: '<Input> component with a label and description.',
+    })(() => <Input label="First Name" />)
+  )
+  .add(
+    'One-line Textbox w/ Error',
+    withInfo({
+      inline: true,
+      text: '<Input> component with a label and description.',
     })(() => (
-      <Field
-        label="Employee ID number"
-        description="Your employee ID was assigned to you when you first joined. Check your ID badge."
-        value="12345"
+      <Input
+        label="Full Name"
+        value="John Peter"
+        error="go back to the server room John"
       />
     ))
   )
   .add(
-    'Input component with error',
+    'Textarea',
     withInfo({
       inline: true,
-      text: '<Field> component with validation',
+      text: '<Textarea> component with a label and description.',
     })(() => (
-      <Field
-        label="Employee ID number"
-        description="Your employee ID was assigned to you when you first joined. Check your ID badge."
-        error="should be a number"
-        value="hello"
+      <Textarea
+        label="Give us some Latin text."
+        value={loremIpsum({ count: 10 })}
       />
-    ))
-  )
-  .add(
-    'Input component with children',
-    withInfo({
-      inline: true,
-      text: '<Field> component with children',
-    })(() => (
-      <Field label="Custom Hello World element" description="This is a test">
-        <p>Hello, world!</p>
-      </Field>
     ))
   )

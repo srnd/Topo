@@ -1,6 +1,7 @@
 import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import { ThemeProvider, Box } from '../src'
+import { withA11y } from '@storybook/addon-a11y'
 
 import srndTheme from './srndTheme'
 
@@ -15,6 +16,8 @@ addDecorator(story => (
     <Box p={3}>{story()}</Box>
   </ThemeProvider>
 ))
+
+addDecorator(withA11y)
 
 const req = require.context('.', true, /\.js$/)
 

@@ -35,7 +35,7 @@ const InputBorder = styled.span`
   ${({ role }) => role}: 0;
 `
 
-const InputField = styled.input`
+const InputBase = styled.input`
   padding: 0.35em 0.45em;
 
   border: ${({ theme }) => theme.borderThickness} solid
@@ -65,19 +65,26 @@ const InputField = styled.input`
     transform: scaleX(1) scaleY(1);
   }
 `
+const InputText = InputBase.withComponent('input')
+const InputTextarea = InputBase.withComponent('textarea')
 
-const Input = props => (
-  <InputWrapper>
-    <InputField {...props} />
-    {['bottom', 'right', 'top', 'left'].map(role => (
-      <InputBorder role={role} />
-    ))}
-  </InputWrapper>
-)
+const Input = props => {
+  return (
+    <InputWrapper>
+      <InputText {...props} />
+      {['bottom', 'right', 'top', 'left'].map(role => (
+        <InputBorder role={role} />
+      ))}
+    </InputWrapper>
+  )
+}
 
 Input.displayName = 'Input'
 
 Input.propTypes = {
+  /** field type, either text or textarea */
+  optionalType: PropTypes.string,
+
   /** what the field says before it's filled out */
   optionalPlaceholder: PropTypes.string,
 
