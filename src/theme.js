@@ -11,11 +11,12 @@ const palette = {
   blueLight: '#aad1e9',
   blueLightest: '#ebf4fa',
   white: '#fff',
-  black: '#484848',
   grayDark: '#8a8a8a',
   gray: '#bdbdbd',
   grayLight: '#e6e6e6',
   grayLightest: '#f9f9f9',
+  black: '#484848',
+  vantablack: '#000000',
 }
 
 const brand = {
