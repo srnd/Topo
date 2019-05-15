@@ -1307,9 +1307,17 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@srnd/topocons@https://github.com/srnd/Topocons.git":
+"@srnd/topocons@^1.0.0":
   version "1.0.0"
-  resolved "https://github.com/srnd/Topocons.git#1771002986df61f34b5815d66d8cd36745e45eb7"
+  resolved "https://registry.yarnpkg.com/@srnd/topocons/-/topocons-1.0.0.tgz#7f8fc9c42e3c2e3b64f7e1bbe372cbba8617576f"
+  integrity sha512-Oz3elwCv0ZFSOHFYSwCyu56yoCAAUZVOnWRugCL4pnXpjOIOTkjcvjH/BtxTX9nkIsBR/Oi2vfbYVsI8rFNv0A==
+  dependencies:
+    react "^16.8.6"
+
+"@srnd/topomoji@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@srnd/topomoji/-/topomoji-1.0.0.tgz#942dda2df7faca236e486d916f3ef3a09767433b"
+  integrity sha512-64a+NlFqZS4IjSGWt2bngk9TnmUQL4nVQooJG05i4TEg5EyvCYBm3ltMwJ7QV6kmO17NHs0z+aDjHbXnYwBeHA==
   dependencies:
     react "^16.8.6"
 
