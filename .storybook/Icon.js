@@ -42,3 +42,12 @@ storiesOf('Icon', module)
       <Illuminati />
     </div>
   ))
+  .add('Color', () => (
+    <div style={{ color: 'green' }}>
+      <p>
+        Use fill to change the color, or let it inheret from the current text
+        color!
+      </p>
+      <Illuminati />
+    </div>
+  ))
