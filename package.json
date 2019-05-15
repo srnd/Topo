@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
+    "@srnd/topocons": "https://github.com/srnd/Topocons.git",
     "clean-tag": "^1.0.4",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
