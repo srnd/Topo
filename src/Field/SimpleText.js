@@ -31,7 +31,7 @@ class Base extends React.Component {
 
   render() {
     const {
-      Inner,
+      type,
       label,
       description,
       error,
@@ -49,7 +49,8 @@ class Base extends React.Component {
           >
             {label}
           </Label>
-          <Inner
+          <BaseInner
+            as={type}
             id={this.fieldId}
             onFocus={e => {
               this.setState({ hasFocusOrValue: true })
@@ -98,12 +99,16 @@ Base.defaultProps = {
   theme,
 }
 
-const Input = props => (
-  <Base Inner={BaseInner.withComponent('input')} {...props} />
-)
-const Textarea = props => (
-  <Base Inner={BaseInner.withComponent('textarea')} {...props} />
-)
+const Input = props => <Base type="input" {...props} />
+const TextareaDefault = props => <Base type="textarea" {...props} />
+
+const Textarea = styled(TextareaDefault)`
+  textarea {
+    height: ${({ size }) => {
+      return { s: 3, m: 5, l: 9, xl: 20 }[size || 'm']
+    }}rem;
+  }
+`
 
 Input.displayName = 'Input'
 Input.propTypes = Base.propTypes

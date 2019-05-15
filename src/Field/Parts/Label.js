@@ -1,22 +1,16 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
+import { MessageWarn } from '@srnd/topocons/icons'
 import theme from '../../theme'
 
 const Error = styled.span`
   transition: all 0.5s ease;
   display: inline;
   opacity: 0;
+  padding-left: 0.8em;
 
   color: ${({ theme }) => theme.colors.error};
-  ${({ children }) =>
-    children &&
-    css`
-      &:before {
-        margin-left: 0.5em;
-        content: '⚠ '; /* TODO(@tylermenezes): Icon font with a better ! glyph. */
-      }
-    `}
 `
 
 const Container = styled.label`
@@ -48,7 +42,13 @@ const Container = styled.label`
 const Label = ({ children, error, htmlFor, moveDown }) => (
   <Container htmlFor={htmlFor} error={Boolean(error)} moveDown={moveDown}>
     {children}
-    <Error>{error}</Error>
+    <Error>
+      {error && (
+        <>
+          <MessageWarn /> {error}
+        </>
+      )}
+    </Error>
   </Container>
 )
 

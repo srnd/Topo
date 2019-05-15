@@ -87,7 +87,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   svg {
-    fill: currentColor;
+    vertical-align: middle;
   }
   textarea {
     resize: none;

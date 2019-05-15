@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { Box, Flex, Text, Heading, theme } from '../src'
+import { Box, Flex, Text, Heading, theme } from '../../src'
 
 const keys = Object.keys(theme.colors).filter(
   key => !Array.isArray(theme.colors[key])
@@ -27,7 +27,7 @@ const Card = ({ name, color }) => (
   </Box>
 )
 
-storiesOf('Color', module).add('Palette', () => (
+storiesOf('Primitives|Colors', module).add('Palette', () => (
   <div>
     <Text as="h1" p={3} f={[4, 5]}>
       Color Palette

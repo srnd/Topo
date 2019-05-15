@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import { storiesOf } from '@storybook/react'
-import { Box, Flex, Heading, Text, Link, Button } from '../src'
+import { Box, Flex, Heading, Text, Link, Button } from '../../src'
 import styled from 'styled-components'
 
 const List = Box.withComponent('ul')
 const Item = Text.withComponent('li')
 const Code = Text.withComponent('pre')
 
-storiesOf('👋 Welcome!', module).add('About Topo', () => (
+storiesOf('Basics|👋 Welcome!', module).add('About Topo', () => (
   <Fragment>
     <Text as="h1" f={6}>
       Welcome!

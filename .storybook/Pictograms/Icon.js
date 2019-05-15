@@ -15,7 +15,7 @@ const IconName = styled.pre`
   font-size: 0.8rem;
 `
 
-storiesOf('Icon', module)
+storiesOf('Pictograms|Icons', module)
   .add('All Icons', () => (
     <div>
       <p>
@@ -43,11 +43,10 @@ storiesOf('Icon', module)
     </div>
   ))
   .add('Color', () => (
-    <div style={{ color: 'green' }}>
-      <p>
-        Use fill to change the color, or let it inheret from the current text
-        color!
-      </p>
+    <p style={{ color: 'green' }}>
       <Illuminati />
-    </div>
+      Use fill to change the color, or let it inheret from the current text
+      color!
+      <Illuminati />
+    </p>
   ))

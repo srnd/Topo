@@ -8,6 +8,7 @@ import srndTheme from './srndTheme'
 addParameters({
   options: {
     theme: srndTheme,
+    panelPosition: 'right',
   },
 })
 

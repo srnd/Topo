@@ -17,10 +17,16 @@ export const caps = props =>
 export const regular = props => props.regular && { fontWeight: 'regular' }
 
 export const bold = props => props.bold && { fontWeight: 'bold' }
+export const italic = props => props.italic && { fontStyle: 'italic' }
+export const underline = props =>
+  props.underline && { textDecoration: 'underline' }
+export const strikethrough = props =>
+  props.strikethrough && { textDecoration: 'line-through' }
+export const mono = props => props.mono && { fontFamily: props.theme.mono }
 
 const Base = props => {
   // const next = filterProps(props)
-  return <p {...props} />
+  return <span {...props} />
 }
 
 const Text = styled(Base)(
@@ -31,8 +37,12 @@ const Text = styled(Base)(
   caps,
   textAlign,
   bold,
+  italic,
+  underline,
+  strikethrough,
   regular,
-  fontWeight
+  fontWeight,
+  mono
 )
 
 Text.displayName = 'Text'
@@ -56,5 +66,14 @@ Text.defaultProps = {
 Text.span = Text.withComponent('span')
 Text.p = Text.withComponent('p')
 Text.s = Text.withComponent('s')
+Text.mark = styled(Text.withComponent('mark'))`
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(
+    -100deg,
+    #faf7854d,
+    #faf785b3 95%,
+    #faf7851a
+  );
+`
 
 export default Text

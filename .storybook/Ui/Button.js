@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { Button, Flex } from '../src'
+import { Button, Flex } from '../../src'
 
-storiesOf('Button', module)
+storiesOf('UI|Button', module)
   .add(
     'Button component',
     withInfo({
