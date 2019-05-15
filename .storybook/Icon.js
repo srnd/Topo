@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Icon from '@srnd/topocons'
+import { Illuminati } from '@srnd/topocons/icons'
 import styled from 'styled-components'
 
 const IconPreview = styled.div`
@@ -14,20 +15,30 @@ const IconName = styled.pre`
   font-size: 0.8rem;
 `
 
-storiesOf('Icon', module).add('All Icons', () => (
-  <div>
-    <p>
-      <strong>Note:</strong> icons are not included by default in Topo, you'll
-      need to import @srnd/topocons.
-    </p>
-    {Object.keys(Icon).map(name => {
-      const E = Icon[name]
-      return (
-        <IconPreview>
-          <E />
-          <IconName>&lt;Icon.{name} /&gt;</IconName>
-        </IconPreview>
-      )
-    })}
-  </div>
-))
+storiesOf('Icon', module)
+  .add('All Icons', () => (
+    <div>
+      <p>
+        <strong>Note:</strong> icons are not included by default in Topo, you'll
+        need to import @srnd/topocons.
+      </p>
+      {Object.keys(Icon).map(name => {
+        const E = Icon[name]
+        return (
+          <IconPreview>
+            <E />
+            <IconName>&lt;Icon.{name} /&gt;</IconName>
+          </IconPreview>
+        )
+      })}
+    </div>
+  ))
+  .add('Single Icon', () => (
+    <div>
+      <p>
+        If you just want a single icon, you can use import {'{'} IconName {'}'}{' '}
+        from @srnd/topocons/icons.
+      </p>
+      <Illuminati />
+    </div>
+  ))

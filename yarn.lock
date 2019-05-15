@@ -1309,7 +1309,7 @@
 
 "@srnd/topocons@https://github.com/srnd/Topocons.git":
   version "1.0.0"
-  resolved "https://github.com/srnd/Topocons.git#025a9e7ba08d4a147fbb02990138b22e347cc987"
+  resolved "https://github.com/srnd/Topocons.git#1771002986df61f34b5815d66d8cd36745e45eb7"
   dependencies:
     react "^16.8.6"
 
