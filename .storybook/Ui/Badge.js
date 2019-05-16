@@ -5,9 +5,11 @@ import { Badge } from '../../src'
 
 storiesOf('UI|Badge', module).add('Badge component', () => (
   <>
-    <Badge positive>Update</Badge>
+    <Badge bg="success">Update</Badge>
     <br />
-    <Badge>6</Badge>
+    <Badge my={1} bg="info">
+      6
+    </Badge>
     <br />
     <Badge negative>3 reports</Badge>
   </>
