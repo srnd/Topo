@@ -9,10 +9,12 @@ const LogoPreview = styled.div`
   display: inline-block;
   text-align: center;
   margin-bottom: 2rem;
+  color: ${({ theme }) => theme.colors.red};
 `
 
 const LogoName = styled.pre`
   font-size: 0.8rem;
+  color: ${({ theme }) => theme.colors.black};
 `
 
 storiesOf('Pictograms|Logos', module)
