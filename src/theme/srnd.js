@@ -1,4 +1,12 @@
-import { includes, get, omit } from 'lodash'
+import { createGlobalStyle, css } from 'styled-components'
+import {
+  filterProps,
+  addAliases,
+  createMediaQuery,
+  makeCx,
+  makeHexa,
+  makeGradient,
+} from './helpers'
 
 const palette = {
   red: '#ff686b',
@@ -34,20 +42,6 @@ export const colors = {
   ...brand,
   ...palette,
 }
-
-export const cx = key => get(colors, key, key)
-
-const createMediaQuery = n => `@media screen and (min-width:${n}em)`
-
-const addAliases = (arr, aliases) =>
-  aliases.forEach((key, i) =>
-    Object.defineProperty(arr, key, {
-      enumerable: false,
-      get() {
-        return this[i]
-      },
-    })
-  )
 
 const aliases = ['sm', 'md', 'lg', 'xl']
 export const breakpoints = [32, 48, 64, 80]
@@ -105,49 +99,16 @@ export const boxShadows = [
   baseShadow + `0 24px 24px 0 ${shadowColor}`,
 ]
 
-export const hexa = (color, alpha) => {
-  const hex = cx(color)
-  if (!includes(hex, '#')) return shadowColor
-  const r = parseInt(hex.slice(1, 3), 16),
-    g = parseInt(hex.slice(3, 5), 16),
-    b = parseInt(hex.slice(5, 7), 16)
-
-  if (alpha >= 0) {
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`
-  } else {
-    return `rgb(${r}, ${g}, ${b})`
+export const GlobalStyle = createGlobalStyle`
+  body {
+    font-size: ${fontSizes[2]}px;
+    font-family: ${font};
   }
-}
+`
 
-export const gradient = (color1, color2) =>
-  `radial-gradient(
-    ellipse farthest-corner at top left,
-    ${cx(color1)} 0%, ${cx(color2)} 100%
-  )`
-
-export const filterProps = props =>
-  omit(props, [
-    'theme',
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    'color',
-    'bg',
-    'fill',
-    'fontSize',
-    'f',
-    'image',
-    'maxWidth',
-    'bold',
-    'regular',
-    'caps',
-    'wrap',
-    'size',
-    'height',
-    'boxShadowSize',
-  ])
+export const cx = makeCx(colors)
+export const hexa = makeHexa(cx, shadowColor)
+export const gradient = makeGradient(cx)
 
 const theme = {
   breakpoints,
@@ -172,6 +133,7 @@ const theme = {
   hexa,
   gradient,
   filterProps,
+  GlobalStyle,
 }
 
 export default theme

@@ -7,13 +7,27 @@ storiesOf('Primitives|Text', module)
   .add('Typography component', () => <Text m={3}>Hello</Text>)
   .add('Setting Font Size', () => (
     <div>
-      <Text.p fontSize={6}>Hello 6</Text.p>
-      <Text.p fontSize={5}>Hello 5</Text.p>
-      <Text.p fontSize={4}>Hello 4</Text.p>
-      <Text.p fontSize={3}>Hello 3</Text.p>
-      <Text.p fontSize={2}>Hello 2</Text.p>
-      <Text.p fontSize={1}>Hello 1</Text.p>
-      <Text.p fontSize={0}>Hello 0</Text.p>
+      <Text.p fontSize={6} mono>
+        &lt;Text.p fontSize={'{'}6{'}'} /&gt;
+      </Text.p>
+      <Text.p fontSize={5} mono>
+        &lt;Text.p fontSize={'{'}5{'}'} /&gt;
+      </Text.p>
+      <Text.p fontSize={4} mono>
+        &lt;Text.p fontSize={'{'}4{'}'} /&gt;
+      </Text.p>
+      <Text.p fontSize={3} mono>
+        &lt;Text.p fontSize={'{'}3{'}'} /&gt;
+      </Text.p>
+      <Text.p fontSize={2} mono>
+        &lt;Text.p fontSize={'{'}2{'}'} /&gt;
+      </Text.p>
+      <Text.p fontSize={1} mono>
+        &lt;Text.p fontSize={'{'}1{'}'} /&gt;
+      </Text.p>
+      <Text.p fontSize={0} mono>
+        &lt;Text.p fontSize={'{'}0{'}'} /&gt;
+      </Text.p>
     </div>
   ))
   .add('Aligning Text', () => (

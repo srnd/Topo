@@ -1,0 +1,37 @@
+[
+  {
+    "id": "legal.more-info",
+    "description": "Provides a link to additional information about SRND's privacy policy.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "legal.pii",
+    "description": "Shown under forms that collect personally identifying information.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "legal.financial",
+    "description": "Shown under forms that collect financial information.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "legal.gdpr-nagbar",
+    "description": "Shown at the top of all pages.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "legal.links.privacy",
+    "description": "Link to privacy page; must mention both privacy and cookies.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "legal.links.conduct",
+    "description": "Link to SRND's policies describing how participants must behave.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "legal.links.trademarks",
+    "description": "Link to SRND's list of trademark registrations.",
+    "defaultMessage": ""
+  }
+]

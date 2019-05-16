@@ -6,8 +6,10 @@ export { default as Flex } from './Flex'
 export { default as Text } from './Text'
 export { default as Link } from './Link'
 export { default as Loading } from './Loading'
+export { default as Legal } from './Legal'
+export { default as Navigation } from './Navigation'
 
 export { default as theme } from './theme'
-export { default as ThemeProvider } from './ThemeProvider'
+export { default as Topo } from './Topo'
 
 export * from './theme'

@@ -61,11 +61,18 @@ Text.propTypes = {
 Text.defaultProps = {
   theme,
   m: 0,
+  fontSize: 1,
 }
 
 Text.span = Text.withComponent('span')
 Text.p = Text.withComponent('p')
 Text.s = Text.withComponent('s')
+Text.h1 = Text.withComponent('h1')
+Text.h2 = Text.withComponent('h2')
+Text.h3 = Text.withComponent('h3')
+Text.h4 = Text.withComponent('h4')
+Text.h5 = Text.withComponent('h5')
+Text.h6 = Text.withComponent('h6')
 Text.mark = styled(Text.withComponent('mark'))`
   border-radius: 1em 0 1em 0;
   background-image: linear-gradient(

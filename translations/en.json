@@ -1,0 +1,14 @@
+{
+  "button.cta.cancel": "Cancel",
+  "button.cta.create": "Create",
+  "button.cta.save": "Save",
+  "button.cta.send": "Send",
+  "button.cta.submit": "Submit",
+  "legal.financial": "In order to process your payment, we'll send your transaction and payment info to our credit card processor and your bank using industry-standard encryption. We don't store your credit card number ourselves.",
+  "legal.gdpr-nagbar": "Heads-up: we store information about you for personalization, security, analytics, and marketing.",
+  "legal.links.conduct": "Code of Conduct",
+  "legal.links.privacy": "Privacy & Cookies",
+  "legal.links.trademarks": "Trademarks",
+  "legal.more-info": "(More info.)",
+  "legal.pii": "We promise to use this information only to provide the service you're requesting, and for our own analytics and marketing. We'll store it securely, and keep it only as long as necessary."
+}
