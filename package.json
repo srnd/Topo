@@ -48,7 +48,7 @@
     "dev": "start-storybook -p 6006",
     "prepare": "babel src -d dist --ignore __tests__ && yarn run fmt",
     "fmt": "prettier {.storybook,src}/**/*.js --write",
-    "translate": "NODE_ENV=production babel ./src  --out-file /dev/null"
+    "build:i18n": "NODE_ENV=production babel ./src  --out-file /dev/null"
   },
   "husky": {
     "hooks": {

@@ -8,6 +8,7 @@ export { default as Link } from './Link'
 export { default as Loading } from './Loading'
 export { default as Legal } from './Legal'
 export { default as Navigation } from './Navigation'
+export { default as Logo } from './Logo'
 
 export { default as theme } from './theme'
 export { default as Topo } from './Topo'
