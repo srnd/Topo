@@ -15,7 +15,6 @@ const Badge = styled(Text.span)`
 Badge.displayName = 'Badge'
 
 Badge.defaultProps = {
-  theme,
   px: 2,
   py: 1,
   bg: 'primary',
