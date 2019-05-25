@@ -1,5 +1,4 @@
 import Box from './Box'
-import theme, { cx, hexa } from './theme'
 import styled, { css } from 'styled-components'
 import {
   space,
@@ -12,19 +11,18 @@ import {
 import PropTypes from 'prop-types'
 
 const Announcement = styled(Box)`
-    display: block
-    width: 100%
-    text-align: center
-    text-decoration: none
-    background-color: ${props => hexa(props.bg, 0.2)};
-    font-weight: 500
-    border-bottom: 3px solid ${props => hexa(props.bg, 0.4)};
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background-color: ${props => props.theme.hexa(props.bg, 0.2)};
+  font-weight: 500;
+  border-bottom: 3px solid ${props => props.theme.hexa(props.bg, 0.4)};
 `
 
 Announcement.displayName = 'Announcement'
 
 Announcement.defaultProps = {
-  theme,
   color: 'black',
   bg: 'success',
   fontSize: 1,

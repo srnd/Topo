@@ -1,6 +1,7 @@
+import React from 'react'
 import Box from './Box'
-import theme, { cx, hexa } from './theme'
 import styled, { css } from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 import {
   space,
   width,
@@ -23,19 +24,38 @@ const Button = styled(Box)`
   border: 1px solid transparent;
   border-radius: ${({ theme }) => theme.radii[1]};
 
+  margin: ${({ theme }) => theme.space[1]}px;
+  margin-left: 0;
   transition: all 0.2s ease-in-out;
 
+  border: 1px solid ${({ theme }) => theme.colors.grayLight};
+  color: ${({ theme }) => theme.colors.black};
   &:hover {
     box-shadow: ${({ theme }) => theme.boxShadows[0]};
-    background-color: ${props => hexa(props.bg, 0.9)};
+    background-color: ${({ theme }) => theme.colors.grayLightest};
   }
   &:active:hover {
     box-shadow: ${({ theme }) => theme.boxShadows[1]};
   }
   &:active {
-    background-color: ${props => hexa(props.bg, 0.7)};
     transform: scale(0.98);
+    background-color: ${({ theme }) => theme.colors.grayLightest};
   }
+
+  ${({ theme, primary, bg }) =>
+    (primary || bg) &&
+    css`
+      border: 1px solid ${theme.colors.primary};
+      background-color: ${bg || theme.colors.primary};
+      color: ${theme.colors.white};
+      &:hover {
+        background-color: ${theme.hexa(bg || theme.colors.primary, 0.9)};
+      }
+      &:active {
+        background-color: ${theme.hexa(bg || theme.colors.primary, 0.7)};
+      }
+    `}
+
   @media (hover: none) {
     box-shadow: ${({ theme }) => theme.boxShadows[1]};
   }
@@ -56,14 +76,52 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  theme,
-  bg: 'primary',
-  color: 'white',
-  fontSize: 2,
+  fontSize: 0,
   m: 0,
 }
 
 Button.button = Button.withComponent('button')
-Button.input = Button.withComponent('input')
+Button.a = Button.withComponent('a')
+
+Button.submit = props => (
+  <Button {...props}>
+    <FormattedMessage
+      id="button.cta.submit"
+      description="When the user submits information in a form."
+    />
+  </Button>
+)
+Button.send = props => (
+  <Button {...props}>
+    <FormattedMessage
+      id="button.cta.send"
+      description="When the user submits a message."
+    />
+  </Button>
+)
+Button.save = props => (
+  <Button {...props}>
+    <FormattedMessage
+      id="button.cta.save"
+      description="When the user saves their edits."
+    />
+  </Button>
+)
+Button.create = props => (
+  <Button {...props}>
+    <FormattedMessage
+      id="button.cta.create"
+      description="When the user creates a new resource."
+    />
+  </Button>
+)
+Button.cancel = props => (
+  <Button {...props}>
+    <FormattedMessage
+      id="button.cta.cancel"
+      description="When the user wants to undo their planned changes."
+    />
+  </Button>
+)
 
 export default Button

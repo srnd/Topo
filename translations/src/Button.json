@@ -1,0 +1,27 @@
+[
+  {
+    "id": "button.cta.submit",
+    "description": "When the user submits information in a form.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "button.cta.send",
+    "description": "When the user submits a message.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "button.cta.save",
+    "description": "When the user saves their edits.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "button.cta.create",
+    "description": "When the user creates a new resource.",
+    "defaultMessage": ""
+  },
+  {
+    "id": "button.cta.cancel",
+    "description": "When the user wants to undo their planned changes.",
+    "defaultMessage": ""
+  }
+]

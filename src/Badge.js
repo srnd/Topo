@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Text from './Text'
-import theme from './theme'
 
 const Badge = styled(Text.span)`
   border-radius: ${({ theme }) => theme.pill};
+  font-size: ${({ theme }) => theme.fontSizes[0]}px;
+  font-weight: 500;
   display: inline-block;
   font-weight: normal;
   letter-spacing: 0.0375em;

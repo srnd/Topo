@@ -7,6 +7,7 @@ import theme from './theme'
 const Link = styled(Text)`
   display: inline-block;
   position: relative;
+  color: currentColor;
 
   transition: all 0.3s ease-in-out;
   &:hover {
@@ -19,7 +20,7 @@ const Link = styled(Text)`
       text-decoration: underline;
       text-decoration-skip-ink: auto;
     `}
-`
+`.withComponent('a')
 
 Link.displayName = 'Link'
 

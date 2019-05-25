@@ -1,11 +1,4 @@
-import React, { Fragment } from 'react'
-import {
-  ThemeProvider as Root,
-  createGlobalStyle,
-  css,
-} from 'styled-components'
-import PropTypes from 'prop-types'
-import theme from './theme'
+import { createGlobalStyle, css } from 'styled-components'
 
 const fontsCss = css`
   @font-face {
@@ -58,7 +51,7 @@ const fontsCss = css`
   }
 `
 
-const GlobalStyle = createGlobalStyle`
+export default () => createGlobalStyle`
   ${fontsCss}
   * {
     box-sizing: border-box;
@@ -74,8 +67,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-size: ${theme.fontSizes[2]}px;
-    font-family: ${theme.font};
     line-height: 1.375;
     position: relative;
     height: 100%;
@@ -96,29 +87,3 @@ const GlobalStyle = createGlobalStyle`
     font-weight: bold;
   }
 `
-
-const ThemeProvider = ({ theme, ...props }) => {
-  createGlobalStyle([], fontsCss)
-  return (
-    <Root
-      theme={theme}
-      {...props}
-      children={
-        <Fragment>
-          <GlobalStyle />
-          {props.children}
-        </Fragment>
-      }
-    />
-  )
-}
-
-ThemeProvider.propTypes = {
-  theme: PropTypes.object,
-}
-
-ThemeProvider.defaultProps = {
-  theme,
-}
-
-export default ThemeProvider
