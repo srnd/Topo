@@ -1,6 +1,6 @@
 {
   "name": "@srnd/topo",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "A React library implementing the SRND design language.",
   "main": "dist/index.js",
   "dependencies": {
@@ -14,7 +14,7 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-intl": "^2.9.0",
-    "react-scripts": "^2.1.5",
+    "react-scripts": "^3.0.1",
     "serve": "^10.1.2",
     "styled-components": "^4.1.3",
     "styled-system": "^3.2.1",
@@ -46,7 +46,8 @@
   },
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "prepare": "babel src -d dist --ignore __tests__ && yarn run fmt",
+    "prepare": "babel src -d dist --ignore __tests__ && yarn run copy:assets && yarn run fmt",
+    "copy:assets": "cp ./src/Loading/*.gif ./dist/Loading/ && cp ./src/Loading/*.svg ./dist/Loading/",
     "fmt": "prettier {.storybook,src}/**/*.js --write",
     "build:i18n": "NODE_ENV=production babel ./src  --out-file /dev/null"
   },
