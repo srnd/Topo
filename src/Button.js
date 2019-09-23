@@ -4,7 +4,48 @@ import styled, { css } from 'styled-components'
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
 
-const Button = styled(ConfettiBox)`
+class ExtendedButton extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { revealDangerous: false, timeout: null }
+  }
+
+  render() {
+    const { children, onClick, ...props } = this.props
+
+    return (
+      <ConfettiBox onClick={(e, f) => this.dispatchClick(e, f)} {...props}>
+        {!this.state.revealDangerous ? (
+          children
+        ) : (
+          <FormattedMessage
+            id="button.cta.danger-confirm"
+            description="When the user clicks for the first time on a dangerous button."
+          />
+        )}
+      </ConfettiBox>
+    )
+  }
+
+  dispatchClick(e, f) {
+    if (this.props.danger && !this.state.revealDangerous) {
+      // This is a danger button, show the danger text
+      const t = setTimeout(
+        () => this.setState({ revealDangerous: false, resetTimeoutId: null }),
+        10000
+      )
+      this.setState({ revealDangerous: true, timeout: t })
+      return false
+    } else {
+      // Run the onclick handler
+      clearTimeout(this.state.timeout)
+      this.setState({ revealDangerous: false, timeout: null })
+      return this.props.onClick(e, f)
+    }
+  }
+}
+
+const Button = styled(ExtendedButton)`
   padding: 0.5rem 1rem;
   display: inline-block;
   cursor: pointer;

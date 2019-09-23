@@ -60,6 +60,9 @@ storiesOf('Primitives|Text', module)
       <Text.p mono>
         I am rendered as <Text mono>&lt;Text mono /&gt;</Text>.
       </Text.p>
+      <Text.p>
+        Here is some <Text.code>&lt;Text.code /&gt;</Text.code>
+      </Text.p>
     </>
   ))
   .add('Marker', () => (

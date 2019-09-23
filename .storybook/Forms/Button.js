@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { Button, Text } from '../../src'
 
-storiesOf('UI|Button', module)
+storiesOf('Forms|Button', module)
   .add('Button component', () => (
     <>
       <Button>
@@ -12,6 +12,9 @@ storiesOf('UI|Button', module)
       <Button primary>
         <Text mono>&lt;Button primary/&gt;</Text>
       </Button>
+      <Button disabled>
+        <Text mono>&lt;Button disabled/&gt;</Text>
+      </Button>
     </>
   ))
   .add('Button w/ Link', () => (
@@ -19,7 +22,17 @@ storiesOf('UI|Button', module)
       Button
     </Button>
   ))
-  .add('Disabled', () => <Button disabled>Disabled</Button>)
+  .add('Dangerous Button', () => (
+    <>
+      <Text.p>
+        You can apply the <Text.code>dangerous</Text.code> prop to have the
+        button confirm.
+      </Text.p>
+      <Button danger onClick={() => alert('Deleted!')}>
+        Delete SRND?
+      </Button>
+    </>
+  ))
   .add('Built-In Translations', () => (
     <>
       <Text.h4 mono>&lt;Button.submit /&gt;</Text.h4>

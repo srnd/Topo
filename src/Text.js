@@ -82,5 +82,11 @@ Text.mark = styled(Text.withComponent('mark'))`
     #faf7851a
   );
 `
+Text.code = styled(Text.withComponent('span'))`
+  background-color: ${({ theme }) => theme.colors.grayLightest};
+  font-family: ${({ theme }) => theme.mono};
+  padding: 0 ${({ theme }) => theme.radius};
+  border-radius: ${({ theme }) => theme.radius};
+`
 
 export default Text

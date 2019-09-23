@@ -71,9 +71,9 @@ export class ConfettiBox extends React.Component {
 
     return (
       <Box
-        onClick={e => {
+        onClick={(e, f) => {
           confettiOnClick && this.showConfetti()
-          return onClick(e)
+          return onClick(e, f)
         }}
         {...props}
       >

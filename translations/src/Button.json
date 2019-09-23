@@ -1,5 +1,10 @@
 [
   {
+    "id": "button.cta.danger-confirm",
+    "description": "When the user clicks for the first time on a dangerous button.",
+    "defaultMessage": ""
+  },
+  {
     "id": "button.cta.submit",
     "description": "When the user submits information in a form.",
     "defaultMessage": ""
