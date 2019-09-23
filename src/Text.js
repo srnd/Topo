@@ -9,7 +9,7 @@ import {
   color,
   propTypes,
 } from 'styled-system'
-import theme, { filterProps } from './theme'
+import theme from './theme'
 
 export const caps = props =>
   props.caps ? { textTransform: 'uppercase' } : null

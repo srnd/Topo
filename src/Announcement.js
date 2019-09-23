@@ -1,14 +1,5 @@
 import Box from './Box'
-import styled, { css } from 'styled-components'
-import {
-  space,
-  width,
-  color,
-  fontSize,
-  textAlign,
-  propTypes,
-} from 'styled-system'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const Announcement = styled(Box)`
   display: block;

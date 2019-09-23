@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { MessageWarn } from '@srnd/topocons/icons'
+import { UiWarning as ErrorIcon } from '@srnd/topocons/icons'
 import theme from '../../theme'
 
 const Error = styled.span`
@@ -11,6 +11,11 @@ const Error = styled.span`
   padding-left: 0.8em;
 
   color: ${({ theme }) => theme.colors.error};
+
+  svg {
+    position: relative;
+    top: 1px;
+  }
 `
 
 const Container = styled.label`
@@ -45,7 +50,7 @@ const Label = ({ children, error, htmlFor, moveDown }) => (
     <Error>
       {error && (
         <>
-          <MessageWarn /> {error}
+          <ErrorIcon /> {error}
         </>
       )}
     </Error>

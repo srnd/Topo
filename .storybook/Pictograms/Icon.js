@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import Icon from '@srnd/topocons'
 import { Eco, Stop } from '@srnd/topocons/icons'
+import { Text } from '../../src'
 import styled from 'styled-components'
 
 const IconPreview = styled.div`
@@ -17,30 +18,33 @@ const IconName = styled.pre`
 
 storiesOf('Pictograms|Icons', module)
   .add('All Icons', () => (
-    <div>
-      <p>
-        <strong>Note:</strong> icons are not included by default in Topo, you'll
-        need to import @srnd/topocons.
-      </p>
+    <>
+      <Text.h1>All Icons</Text.h1>
+      <Text.p>
+        <Text.span strong>Note:</Text.span> icons are not included by default in
+        Topo, you'll need to import @srnd/topocons.
+      </Text.p>
       {Object.keys(Icon).map(name => {
         const E = Icon[name]
         return (
           <IconPreview>
-            <E />
+            <Text.span fontSize="1.25em">
+              <E />
+            </Text.span>
             <IconName>&lt;Icon.{name} /&gt;</IconName>
           </IconPreview>
         )
       })}
-    </div>
+    </>
   ))
   .add('Single Icon', () => (
-    <div>
-      <p>
+    <>
+      <Text.p>
         If you just want a single icon, you can use import {'{'} IconName {'}'}{' '}
         from @srnd/topocons/icons.
-      </p>
+      </Text.p>
       <Stop />
-    </div>
+    </>
   ))
   .add('Color', () => (
     <p style={{ color: 'green' }}>

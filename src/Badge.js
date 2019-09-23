@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Text from './Text'
 
 const Badge = styled(Text.span)`

@@ -1,15 +1,7 @@
 import React from 'react'
-import Box, { ConfettiBox } from './Box'
+import { ConfettiBox } from './Box'
 import styled, { css } from 'styled-components'
 import { FormattedMessage } from 'react-intl'
-import {
-  space,
-  width,
-  color,
-  fontSize,
-  textAlign,
-  propTypes,
-} from 'styled-system'
 import PropTypes from 'prop-types'
 
 const Button = styled(ConfettiBox)`

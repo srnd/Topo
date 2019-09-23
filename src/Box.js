@@ -8,14 +8,13 @@ import {
   color,
   fontSize,
   textAlign,
-  responsiveStyle,
   maxWidth,
   minWidth,
   maxHeight,
   minHeight,
   propTypes,
 } from 'styled-system'
-import theme, { filterProps } from './theme'
+import theme from './theme'
 
 const Base = props => {
   return <div {...props} />
@@ -100,4 +99,15 @@ export class ConfettiBox extends React.Component {
   }
 
   // TODO(@tylermenezes): Show confetti if props.confetti changed and props.confetti is now true.
+}
+
+ConfettiBox.displayName = 'ConfettiBox'
+ConfettiBox.defaultProps = {
+  ...Box.defaultProps,
+  confettiOnClick: false,
+}
+
+ConfettiBox.propTypes = {
+  ...Box.propTypes,
+  confettiOnClick: PropTypes.bool,
 }
