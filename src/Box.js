@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import Confetti from 'react-dom-confetti'
 import {
   space,
   width,
@@ -57,3 +58,46 @@ Box.propTypes = {
 }
 
 export default Box
+
+export class ConfettiBox extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showConfetti: false,
+    }
+  }
+
+  render() {
+    const { confettiOnClick, children, onClick, ...props } = this.props
+
+    return (
+      <Box
+        onClick={e => {
+          confettiOnClick && this.showConfetti()
+          return onClick(e)
+        }}
+        {...props}
+      >
+        {children}
+        <Confetti
+          active={this.state.showConfetti}
+          config={{
+            colors: [
+              theme.colors.red,
+              theme.colors.green,
+              theme.colors.blue,
+              theme.colors.gray,
+            ],
+          }}
+        />
+      </Box>
+    )
+  }
+
+  showConfetti() {
+    this.setState({ showConfetti: true })
+    setTimeout(() => this.setState({ showConfetti: false }), 1000)
+  }
+
+  // TODO(@tylermenezes): Show confetti if props.confetti changed and props.confetti is now true.
+}

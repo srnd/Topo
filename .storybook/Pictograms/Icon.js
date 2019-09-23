@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Icon from '@srnd/topocons'
-import { Illuminati } from '@srnd/topocons/icons'
+import { Eco, Stop } from '@srnd/topocons/icons'
 import styled from 'styled-components'
 
 const IconPreview = styled.div`
@@ -39,14 +39,13 @@ storiesOf('Pictograms|Icons', module)
         If you just want a single icon, you can use import {'{'} IconName {'}'}{' '}
         from @srnd/topocons/icons.
       </p>
-      <Illuminati />
+      <Stop />
     </div>
   ))
   .add('Color', () => (
     <p style={{ color: 'green' }}>
-      <Illuminati />
       Use fill to change the color, or let it inheret from the current text
       color!
-      <Illuminati />
+      <Eco />
     </p>
   ))

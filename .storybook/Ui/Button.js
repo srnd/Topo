@@ -34,3 +34,16 @@ storiesOf('UI|Button', module)
       <Button.cancel />
     </>
   ))
+  .add('Confetti', () => (
+    <>
+      <Text.h1>Ready to register?</Text.h1>
+      <Text.p>
+        To register, just click the button below.{' '}
+        <Text.span mono>
+          confettiOnClick={'{'}true{'}'}
+        </Text.span>{' '}
+        will greet you.
+      </Text.p>
+      <Button.submit confettiOnClick={true} />
+    </>
+  ))

@@ -1,5 +1,5 @@
 import React from 'react'
-import Box from './Box'
+import Box, { ConfettiBox } from './Box'
 import styled, { css } from 'styled-components'
 import { FormattedMessage } from 'react-intl'
 import {
@@ -12,7 +12,7 @@ import {
 } from 'styled-system'
 import PropTypes from 'prop-types'
 
-const Button = styled(Box)`
+const Button = styled(ConfettiBox)`
   padding: 0.5rem 1rem;
   display: inline-block;
   cursor: pointer;

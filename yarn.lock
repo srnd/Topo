@@ -1858,10 +1858,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@srnd/topocons@^1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@srnd/topocons/-/topocons-1.0.2.tgz#2d9869d4d5e38cb02daeca7cabb205a0b18747ce"
-  integrity sha512-k2B6C7NfmHiHgjvtHGYjEdoGx+gyMtKz8E9rBL6z7LwwNgoW6VktAOIsB+9dPXgYDh3KwznzV790T+C47FQppg==
+"@srnd/topocons@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@srnd/topocons/-/topocons-1.1.1.tgz#fdbaf81a333e12d4d51d91c4ac77f40559af1bfb"
+  integrity sha512-20H24YSm2UrR7f2ni2qz/Aac4IjKotd0ZoxucV2Qvz13gMwZU6a61EROV8EHVSAksoPlb1KZSbp0VT0Ip7Lcwg==
   dependencies:
     react "^16.8.6"
 
@@ -5572,6 +5572,11 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
+
+dom-confetti@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/dom-confetti/-/dom-confetti-0.1.1.tgz#f53c355301286430e9f500567adac5041c827468"
+  integrity sha512-cyTs35FOqOlm+9rC8C5p0BFo0aHR2t6VWHdXmvgUEFHsF/P7tZeS5nw71oX6NifJrlxOmZ6VcmCH/hn99mqaAA==
 
 dom-converter@^0.2:
   version "0.2.0"
@@ -11307,6 +11312,13 @@ react-docgen@^3.0.0:
     doctrine "^2.0.0"
     node-dir "^0.1.10"
     recast "^0.16.0"
+
+react-dom-confetti@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-dom-confetti/-/react-dom-confetti-0.1.1.tgz#f9d611110413faed8da72de1f47fbce78df637b9"
+  integrity sha512-QT2orDvHChdhIUU7HZtx0kiEMiBtZKDfPqzfoku7bftvLM5t7d1fbQX0JO8sw+tDVWJFgceNJtkq6bv9V/eXQQ==
+  dependencies:
+    dom-confetti "0.1.1"
 
 react-dom@^16.8.1:
   version "16.8.6"
