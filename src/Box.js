@@ -1,37 +1,34 @@
-import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import {
   space,
   width,
   color,
   fontSize,
   textAlign,
-  responsiveStyle,
   maxWidth,
   minWidth,
   maxHeight,
   minHeight,
+  borderRadius,
   propTypes,
 } from 'styled-system'
-import theme, { filterProps } from './theme'
+import theme from './theme'
 
-const Base = props => {
-  return <div {...props} />
-}
-
-const Box = styled(Base)(
-  [],
-  space,
-  width,
-  color,
-  fontSize,
-  textAlign,
-  maxWidth,
-  minWidth,
-  maxHeight,
-  minHeight
-)
+const Box = styled.div`
+  ${color}
+  ${borderRadius}
+  ${color}
+  ${fontSize}
+  ${maxHeight}
+  ${maxWidth}
+  ${minHeight}
+  ${minWidth}
+  ${propTypes}
+  ${space}
+  ${textAlign}
+  ${width}
+`
 
 Box.displayName = 'Box'
 Box.header = Box.withComponent('header')

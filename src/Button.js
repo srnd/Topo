@@ -2,15 +2,7 @@ import React from 'react'
 import Box from './Box'
 import styled, { css } from 'styled-components'
 import { FormattedMessage } from 'react-intl'
-import {
-  space,
-  width,
-  color,
-  fontSize,
-  textAlign,
-  propTypes,
-} from 'styled-system'
-import PropTypes from 'prop-types'
+import { propTypes } from 'styled-system'
 
 const Button = styled(Box)`
   padding: 0.5rem 1rem;
@@ -66,13 +58,13 @@ Button.displayName = 'Button'
 
 Button.propTypes = {
   /** flip colors */
-  inverted: PropTypes.bool,
+  inverted: propTypes.bool,
   /** add hover/focus animation */
-  scale: PropTypes.bool,
+  scale: propTypes.bool,
   /** add left text arrows */
-  chevronLeft: PropTypes.bool,
+  chevronLeft: propTypes.bool,
   /** add right text arrows */
-  chevronRight: PropTypes.bool,
+  chevronRight: propTypes.bool,
 }
 
 Button.defaultProps = {

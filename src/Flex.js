@@ -14,7 +14,12 @@ const wrap = props => (props.wrap ? { flexWrap: 'wrap' } : null)
 
 const Flex = styled(Box)`
   display: flex;
-  ${alignSelf} ${alignItems} ${justifyContent} ${wrap} ${flexDirection} ${flex};
+  ${alignSelf} 
+  ${alignItems} 
+  ${justifyContent} 
+  ${wrap} 
+  ${flexDirection} 
+  ${flex}
 `
 
 Flex.propTypes = {

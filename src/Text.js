@@ -1,6 +1,4 @@
-import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 import {
   fontSize,
   fontWeight,
@@ -9,7 +7,7 @@ import {
   color,
   propTypes,
 } from 'styled-system'
-import theme, { filterProps } from './theme'
+import theme from './theme'
 
 export const caps = props =>
   props.caps ? { textTransform: 'uppercase' } : null
@@ -24,33 +22,27 @@ export const strikethrough = props =>
   props.strikethrough && { textDecoration: 'line-through' }
 export const mono = props => props.mono && { fontFamily: props.theme.mono }
 
-const Base = props => {
-  // const next = filterProps(props)
-  return <span {...props} />
-}
-
-const Text = styled(Base)(
-  [],
-  fontSize,
-  space,
-  color,
-  caps,
-  textAlign,
-  bold,
-  italic,
-  underline,
-  strikethrough,
-  regular,
-  fontWeight,
-  mono
-)
+const Text = styled.span`
+  ${fontSize}
+  ${space}
+  ${color}
+  ${caps}
+  ${textAlign}
+  ${bold}
+  ${italic}
+  ${underline}
+  ${strikethrough}
+  ${regular}
+  ${fontWeight}
+  ${mono}
+`
 
 Text.displayName = 'Text'
 
 Text.propTypes = {
-  caps: PropTypes.bool,
-  regular: PropTypes.bool,
-  bold: PropTypes.bool,
+  caps: propTypes.bool,
+  regular: propTypes.bool,
+  bold: propTypes.bool,
   ...propTypes.fontSize,
   ...propTypes.fontWeight,
   ...propTypes.textAlign,
