@@ -1,6 +1,7 @@
 {
   "button.cta.cancel": "Cancel",
   "button.cta.create": "Create",
+  "button.cta.danger-confirm": "Are you sure?",
   "button.cta.save": "Save",
   "button.cta.send": "Send",
   "button.cta.submit": "Submit",

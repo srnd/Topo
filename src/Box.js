@@ -54,3 +54,57 @@ Box.propTypes = {
 }
 
 export default Box
+
+export class ConfettiBox extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showConfetti: false,
+    }
+  }
+
+  render() {
+    const { confettiOnClick, children, onClick, ...props } = this.props
+
+    return (
+      <Box
+        onClick={(e, f) => {
+          confettiOnClick && this.showConfetti()
+          return onClick(e, f)
+        }}
+        {...props}
+      >
+        {children}
+        <Confetti
+          active={this.state.showConfetti}
+          config={{
+            colors: [
+              theme.colors.red,
+              theme.colors.green,
+              theme.colors.blue,
+              theme.colors.gray,
+            ],
+          }}
+        />
+      </Box>
+    )
+  }
+
+  showConfetti() {
+    this.setState({ showConfetti: true })
+    setTimeout(() => this.setState({ showConfetti: false }), 1000)
+  }
+
+  // TODO(@tylermenezes): Show confetti if props.confetti changed and props.confetti is now true.
+}
+
+ConfettiBox.displayName = 'ConfettiBox'
+ConfettiBox.defaultProps = {
+  ...Box.defaultProps,
+  confettiOnClick: false,
+}
+
+ConfettiBox.propTypes = {
+  ...Box.propTypes,
+  confettiOnClick: PropTypes.bool,
+}

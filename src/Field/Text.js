@@ -37,18 +37,25 @@ class Base extends React.Component {
       error,
       onFocus,
       onBlur,
+      simple,
       ...other
     } = this.props
+
+    const labelElement = (
+      <Label
+        htmlFor={this.fieldId}
+        error={this.state.hasFocusOrValue && error}
+        moveDown={simple && !this.state.hasFocusOrValue}
+      >
+        {label}
+      </Label>
+    )
+
     return (
       <Container className={this.props.className}>
+        {simple || labelElement}
         <TextWrapper error={error} {...other}>
-          <Label
-            htmlFor={this.fieldId}
-            error={this.state.hasFocusOrValue && error}
-            moveDown={!this.state.hasFocusOrValue}
-          >
-            {label}
-          </Label>
+          {simple && labelElement}
           <BaseInner
             as={type}
             id={this.fieldId}
