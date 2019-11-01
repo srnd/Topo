@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { propTypes } from 'styled-system'
 import { ThemeProvider } from 'styled-components'
 import { IntlProvider } from 'react-intl'
 import { GlobalStyle, srndTheme } from './theme'
@@ -31,8 +32,8 @@ const Topo = ({ theme, locale, ...props }) => {
 }
 
 Topo.propTypes = {
-  theme: PropTypes.object,
-  locale: PropTypes.string,
+  theme: propTypes.object,
+  locale: propTypes.string,
 }
 
 Topo.defaultProps = {

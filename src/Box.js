@@ -1,5 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import {
   space,
   width,
@@ -13,6 +14,7 @@ import {
   borderRadius,
   propTypes,
 } from 'styled-system'
+import Confetti from 'react-dom-confetti'
 import theme from './theme'
 
 const Box = styled.div`
@@ -24,7 +26,6 @@ const Box = styled.div`
   ${maxWidth}
   ${minHeight}
   ${minWidth}
-  ${propTypes}
   ${space}
   ${textAlign}
   ${width}
@@ -106,5 +107,5 @@ ConfettiBox.defaultProps = {
 
 ConfettiBox.propTypes = {
   ...Box.propTypes,
-  confettiOnClick: PropTypes.bool,
+  confettiOnClick: propTypes.bool,
 }

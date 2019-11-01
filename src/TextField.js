@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
+import { propTypes } from 'styled-system'
 import PropTypes from 'prop-types'
 import theme from './theme'
 
@@ -83,19 +84,19 @@ Input.displayName = 'Input'
 
 Input.propTypes = {
   /** field type, either text or textarea */
-  optionalType: PropTypes.string,
+  optionalType: propTypes.string,
 
   /** what the field says before it's filled out */
-  optionalPlaceholder: PropTypes.string,
+  optionalPlaceholder: propTypes.string,
 
   /** if true, there was an error in this field */
-  optionalError: PropTypes.bool,
+  optionalError: propTypes.bool,
 
   /** current text value */
-  value: PropTypes.string,
+  value: propTypes.string,
 
   /** function to run when the user types new text */
-  onChange: PropTypes.func,
+  onChange: propTypes.func,
 }
 
 Input.defaultProps = {

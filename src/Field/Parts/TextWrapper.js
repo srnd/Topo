@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
+import { propTypes } from 'styled-system'
 import theme from '../../theme'
 
 const Border = styled.span`
@@ -68,7 +69,7 @@ TextWrapper.displayName = 'TextWrapper'
 
 TextWrapper.propTypes = {
   /** if true, there was an error in this field and it should be displayed with a red border when unfocused */
-  error: PropTypes.bool,
+  error: propTypes.bool,
 }
 
 TextWrapper.defaultProps = {

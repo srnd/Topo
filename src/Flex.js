@@ -8,7 +8,7 @@ import {
   propTypes,
 } from 'styled-system'
 import Box from './Box'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 const wrap = props => (props.wrap ? { flexWrap: 'wrap' } : null)
 
@@ -23,7 +23,7 @@ const Flex = styled(Box)`
 `
 
 Flex.propTypes = {
-  wrap: PropTypes.bool,
+  wrap: propTypes.bool,
   ...propTypes.alignSelf,
   ...propTypes.alignItems,
   ...propTypes.justifyContent,

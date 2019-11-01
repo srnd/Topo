@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
+import { propTypes } from 'styled-system'
 import { UiWarning as ErrorIcon } from '@srnd/topocons/icons'
 import theme from '../../theme'
 
@@ -61,10 +62,10 @@ Label.displayName = 'Label'
 
 Label.propTypes = {
   /** field name */
-  children: PropTypes.string,
+  children: propTypes.string,
 
   /** error to display, if any */
-  optionalError: PropTypes.string,
+  optionalError: propTypes.string,
 }
 
 Label.defaultProps = {

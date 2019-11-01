@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Text from './Text'
 import PropTypes from 'prop-types'
+import { propTypes } from 'styled-system'
 import { css } from 'styled-components'
 import theme from './theme'
 
@@ -26,11 +27,11 @@ Link.displayName = 'Link'
 
 Link.propTypes = {
   /** you know, where the link goes */
-  href: PropTypes.string,
+  href: propTypes.string,
   /** enable text-decoration: underline */
-  underline: PropTypes.bool,
+  underline: propTypes.bool,
   /** enable text-decoration: underline on hover*/
-  hoverline: PropTypes.bool,
+  hoverline: propTypes.bool,
 }
 
 Link.defaultProps = {

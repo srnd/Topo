@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { propTypes } from 'styled-system'
 import PropTypes from 'prop-types'
 import theme from '../theme'
 import TextWrapper from './Parts/TextWrapper'
@@ -78,28 +79,28 @@ class Base extends React.Component {
 
 Base.propTypes = {
   /** Field name */
-  label: PropTypes.string,
+  label: propTypes.string,
 
   /** help text */
-  optionalDescription: PropTypes.string,
+  optionalDescription: propTypes.string,
 
   /** error to display, if any */
-  optionalError: PropTypes.oneOf([PropTypes.bool, PropTypes.string]),
+  optionalError: PropTypes.oneOf([propTypes.bool, propTypes.string]),
 
   /** what to display for the type, if children are not provided */
-  optionalType: PropTypes.string,
+  optionalType: propTypes.string,
 
   /** what to display for the input element, if type is omitted */
-  optionalChildren: PropTypes.node,
+  optionalChildren: propTypes.node,
 
   /** what the field says before it's filled out */
-  optionalPlaceholder: PropTypes.string,
+  optionalPlaceholder: propTypes.string,
 
   /** current text value */
-  value: PropTypes.string,
+  value: propTypes.string,
 
   /** function to run when the user types new text */
-  onChange: PropTypes.func,
+  onChange: propTypes.func,
 }
 
 Base.defaultProps = {
@@ -118,11 +119,11 @@ const Textarea = styled(TextareaDefault)`
 `
 
 Input.displayName = 'Input'
-Input.propTypes = Base.propTypes
+// Input.propTypes = Base.propTypes
 Input.defaultProps = Base.defaultProps
 
 Textarea.displayName = 'Textarea'
-Textarea.propTypes = Base.propTypes
+// Textarea.propTypes = Base.propTypes
 Textarea.defaultProps = Base.defaultProps
 
 export { Input, Textarea }

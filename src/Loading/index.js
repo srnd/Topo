@@ -20,7 +20,7 @@ const Loading = () => (
 )
 
 Loading.displayName = 'Loading'
-Loading.propTypes = {}
+// Loading.propTypes = {}
 Loading.defaultProps = {
   theme,
 }
