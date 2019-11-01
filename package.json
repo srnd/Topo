@@ -1,6 +1,6 @@
 {
   "name": "@srnd/topo",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A React library implementing the SRND design language.",
   "main": "dist/index.js",
   "dependencies": {
